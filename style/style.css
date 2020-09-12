@@ -5,6 +5,9 @@
     --main-bgButton: #3c6e71;
     --main-bgButtonT: #353535;
 }
+html {
+    scroll-behavior: smooth;
+}
 * {
     padding: 0;
     margin: 0;
