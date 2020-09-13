@@ -13,6 +13,13 @@ html {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -29,29 +36,39 @@ header{
     background-color: var(--main-bgC);
     height: 100vh;
 }
-.welcome{
+.Company{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.welcome .logo {
+.Company-logo{
     color: #fff;
+    animation-name: Logo_movement;
+    animation-duration: 4s;
+    font-weight: 300;
 }
-.text{
+.Company-text{
     color: #fff;
+    font-weight: 500;
+    margin-top: .5em;
+    margin-left: .5em;
 }
-
+                    /* Don't touch */
 .products{
     padding: 2em;
     height: 100vh;
 }
+.section-name .text{
+    font-weight: 300;
+}
 .section-data{
-    margin-top: 4em;
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 1em;
 }
-.sep{
-    margin-top: 3em;
-}
+
 .product{
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -98,5 +115,15 @@ header{
 @media only screen and (max-width: 900px) {
     .sep {
         margin-top: 0em;
+    }
+}
+
+@keyframes Logo_movement {
+    0% {
+        letter-spacing: 1em;
+    }
+
+    100% {
+        letter-spacing: 0em;
     }
 }

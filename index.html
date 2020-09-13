@@ -1,31 +1,29 @@
+<!-- 
+
+
+1. Get rid of bootstrap
+2. Set up js 
+
+
+-->
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="style/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-            crossorigin="anonymous">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-            crossorigin="anonymous">
-        </script>
-        <script src="script/script.js "></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">            <script src="script/script.js "></script>
         <title>Market</title>
     </head>
     <body>
 
         <header>
-            <nav class="navbar navbar-expand-md navbar-dark">
+            <!-- <nav class="navbar navbar-expand-md navbar-dark">
                 <div class="container-fluid">
                     <a href="#" class="navbar-brand">Logo</a>
                     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -51,83 +49,63 @@
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav> -->
 
             <div class="container">
-                <div class="welcome">
-                    <p class="logo">Logo</p>
-                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                <div class="Company">
+                    <h1 class="Company-logo">Logo</h1>
+                    <p class="Company-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.</p>
                 </div>
             </div>
+
         </header>
 
         <main>
             <div class="products" id="products">
                 <div class="container">
                     <div class="section-name">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p class="section-text">Products</p>
-                            </div>
-                        </div>
+                        <h2 class="text">Products</h2>
                     </div>
                     <div class="section-data">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="product">
-                                    <div class="info">
-                                        <p class="p-name">p1</p>
-                                        <p class="p-cost">100$</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="product">
-                                    <div class="info">
-                                        <p class="p-name">p1</p>
-                                        <p class="p-cost">100$</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="product">
-                                    <div class="info">
-                                        <p class="p-name">p1</p>
-                                        <p class="p-cost">100$</p>
-                                    </div>
-                                </div>
+                        <div class="product">
+                            <div class="info">
+                                <p class="p-name">p1</p>
+                                <p class="p-cost">100$</p>
                             </div>
                         </div>
-                        <div class="sep"></div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="product">
-                                    <div class="info">
-                                        <p class="p-name">p1</p>
-                                        <p class="p-cost">100$</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="product">
-                                    <div class="info">
-                                        <p class="p-name">p1</p>
-                                        <p class="p-cost">100$</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="product">
-                                    <div class="info">
-                                        <p class="p-name">p1</p>
-                                        <p class="p-cost">100$</p>
-                                    </div>
-                                </div>
+                        <div class="product">
+                            <div class="info">
+                                <p class="p-name">p1</p>
+                                <p class="p-cost">100$</p>
                             </div>
                         </div>
-                        <div class="sep"></div>
-                        <div class="showP">
+                        <div class="product">
+                            <div class="info">
+                                <p class="p-name">p1</p>
+                                <p class="p-cost">100$</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="info">
+                                <p class="p-name">p1</p>
+                                <p class="p-cost">100$</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="info">
+                                <p class="p-name">p1</p>
+                                <p class="p-cost">100$</p>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="info">
+                                <p class="p-name">p1</p>
+                                <p class="p-cost">100$</p>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="showP">
                             <div class="row">
                                 <div class="col-md-2">
                                     <div class="showP-inside">
@@ -150,7 +128,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
