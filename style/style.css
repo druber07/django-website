@@ -38,17 +38,10 @@ section{
 }
 .container {
     margin-right: auto;
-    /* 1 */
     margin-left: auto;
-    /* 1 */
-
     max-width: 960px;
-    /* 2 */
-
     padding-right: 10px;
-    /* 3 */
     padding-left: 10px;
-    /* 3 */
 }
                     /* Header section */
             /* Menu */
@@ -262,7 +255,7 @@ fieldset {
 }
                     /* Footer */
 footer{
-    background: #353535;
+    background: #fff;
     padding-left: 20%;
     padding-right: 20%;
 }
@@ -276,7 +269,7 @@ footer{
 .social-icon-i,
 .social-icon-y{
     font-size: 1.5em;
-    color: #fff;
+    color: rgb(87, 87, 87);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -284,13 +277,13 @@ footer{
     transition: 0.3s;
 }
 .social-icon-f:hover{
-    background: rgb(28, 41, 155);
+    background: rgba(32, 113, 235, 0.397);
 }
 .social-icon-i:hover{
-    background: rgb(126, 126, 126);
+    background: rgba(126, 126, 126, 0.438);
 }
 .social-icon-y:hover{
-    background: rgb(126, 0, 0);
+    background: rgba(206, 21, 21, 0.411);
 }
 .social-icon-f i,
 .social-icon-i i,
