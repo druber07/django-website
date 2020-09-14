@@ -1,3 +1,4 @@
+                    /* Reset & variables */
 :root {
     --main-bgC: #284b63;
     --main-bgBox: #d9d9d9;
@@ -20,6 +21,13 @@ html {
     margin-right: auto;
     margin-left: auto;
 }
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+li{
+    list-style: none;
+}
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -31,10 +39,49 @@ input[type="reset"] {
     cursor: pointer;
     outline: inherit;
 }
-
+                    /* Header section */
 header{
     background-color: var(--main-bgC);
     height: 100vh;
+}
+.Header-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    margin: 0px 15px 0px 15px;
+}
+.Menu-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+.navbar-active{
+    transform: translateX(0%);
+}
+.nav-item{
+    margin-left: 10px;
+}
+.nav-item:hover {
+    margin-left: 10px;
+}
+.nav-item-link {
+    color: #fff;
+    font-weight: 300;
+}
+.burger{
+    display: none;
+}
+.burger div{
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    margin: 5px;
 }
 .Company{
     position: absolute;
@@ -54,7 +101,7 @@ header{
     margin-top: .5em;
     margin-left: .5em;
 }
-                    /* Don't touch */
+                    /* Product section */
 .products{
     padding: 2em;
     height: 100vh;
@@ -68,7 +115,6 @@ header{
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     grid-gap: 1em;
 }
-
 .product{
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -89,7 +135,7 @@ header{
     margin-left: 10px;
     font-size: 14px;
 }
-
+                    /* TODO:Fix */
 .showP{
     margin-top: 3em;
     padding: 0px;
@@ -105,19 +151,43 @@ header{
     padding: 0px;
     
 }
-
+                    /* !Fix */
+                    /* About-us section */
 .about-us{
     background-color: var(--main-bgC);
     height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.about-us-text{
+    
 }
 
-
-@media only screen and (max-width: 900px) {
-    .sep {
-        margin-top: 0em;
+@media only screen and (max-width: 940px) {
+    body{
+        overflow-x: hidden;
+    }
+    .navbar{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        display: flex;
+        font-display: colomn;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5 ease-in ;
+    }
+    .navbar li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
     }
 }
-
 @keyframes Logo_movement {
     0% {
         letter-spacing: 1em;
