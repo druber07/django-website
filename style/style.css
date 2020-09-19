@@ -355,22 +355,20 @@ footer{
 }
 @media only screen and (max-width: 980px) {
     body{
-        overflow-x: hidden;
+        overflow-y: hidden;
     }
     .nav{
-        position: absolute;
-        right: 0px;
-        height: 90vh;
-        top: 10vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 20%;
-        transform: translateX(100%);
+        transform: translateY(0%);
         transition: 0.3s;
     }
+    .nav li{
+        opacity: 0;
+    }
     .active-nav {
-        transform: translateX(0%);
+        transform: translateY(100%);
+    }
+    .active-nav li{
+        opacity: 100;
     }
     .burger{
         display: block;
