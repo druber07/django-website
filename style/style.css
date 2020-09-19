@@ -196,12 +196,17 @@ section{
 .show-more {
     margin-top: 3em;
     padding: 0px;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 .show-more-btn{
-    display: flex;
-    justify-content: center;
+    color: #fff;
+    background: #3c6e71;
+    border-radius: 5px;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
 }
                     /* About-us section */
 .about-us{
@@ -228,7 +233,7 @@ section{
 }
                     /* Contact-us section */
 .Contact-us{
-    height: 100vh;
+    height: 94vh;
 }
 .contact{
     width: 100%;
@@ -324,6 +329,7 @@ footer{
     justify-content: center;
     justify-content: space-around;
     padding: 1.2em;
+    height: 6vh;
 }
 .social-icon-f,
 .social-icon-i,
