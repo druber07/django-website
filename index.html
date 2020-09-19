@@ -9,18 +9,17 @@
         <title>Market</title>
     </head>
     <body>
-
         <section class="header">
             <nav class="Menu">
                 <a href="#" class="Menu-brand">Logo</a>
-                <ul class="nav">
+                <ul class="nav" id="nav">
                     <li class="nav-item">
                         <a href="#products" class="nav-item-link">
                             Products
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-item-link">
+                        <a href="#about-us" class="nav-item-link">
                             About Us
                         </a>
                     </li>
@@ -30,7 +29,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class="burger" id="burger">
+                <div class="burger" onClick="navSlide()">
                     <div class="line_1"></div>
                     <div class="line_2"></div>
                     <div class="line_3"></div>
@@ -51,69 +50,57 @@
                     <div class="section-name">
                         <h2 class="section-name-text">Products</h2>
                     </div>
-                    
                     <div class="section-data">
-                        <div class="product">
+                        <div class="product" id="0" onClick="product_show(this.id)" onHover="hoverProduct()">
                             <div class="info">
                                 <p class="product-name">p1</p>
                                 <p class="product-cost">100$</p>
                             </div>
+                            <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
                         </div>
-                        <div class="product">
+                        <div class="product" id="1" onClick="product_show(this.id)">
                             <div class="info">
                                 <p class="product-name">p1</p>
                                 <p class="product-cost">100$</p>
                             </div>
+                            <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
                         </div>
-                        <div class="product">
+                        <div class="product" id="2" onClick="product_show(this.id)">
                             <div class="info">
                                 <p class="product-name">p1</p>
                                 <p class="product-cost">100$</p>
                             </div>
+                            <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
                         </div>
-                        <div class="product">
+                        <div class="product" id="3" onClick="product_show(this.id)">
                             <div class="info">
                                 <p class="product-name">p1</p>
                                 <p class="product-cost">100$</p>
                             </div>
+                            <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
                         </div>
-                        <div class="product">
+                        <div class="product" id="5" onClick="product_show(this.id)">
                             <div class="info">
                                 <p class="product-name">p1</p>
                                 <p class="product-cost">100$</p>
                             </div>
+                            <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
                         </div>
-                        <div class="product">
+                        <div class="product" id="6" onClick="product_show(this.id)">
                             <div class="info">
                                 <p class="product-name">p1</p>
                                 <p class="product-cost">100$</p>
                             </div>
+                            <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
                         </div>
-                        
-                        <!-- <div class="showP">
-                                    <div class="showP-inside">
-                                        <button class="arrow left">
-                                            <svg width="1em" height="1em" viewBox="0 0 16 16"
-                                                class="bi bi-caret-left-fill" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
-                                            </svg>
-                                        </button>
-                                        <p class="num">0</p>
-                                        <button class="arrow left">
-                                            <svg width="1em" height="1em" viewBox="0 0 16 16"
-                                                class="bi bi-caret-right-fill" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-                                            </svg>
-                            </div>
+
+                        <!-- <div class="show-more">
+                            <button name="show-more-btn" type="submit" id="show-more-btn">More...</button>
                         </div> -->
                     </div>
                 </div>
             </section>
-            <section class="about-us">
+            <section class="about-us" id="about-us">
                 <div class="container">
                     <div class="about-us-info">
                         <h2 class="about-us-name">About Us</h2>
@@ -124,14 +111,16 @@
                     </div>
                 </div>
             </section>
-            <section class="Contact-us">
+            <!-- <section class="Contact-us">
                 <div class="container">
-                    <!-- <form class="contact" action="" method="post">
-                        <h2>Contact us</h2>
+                    <form class="contact" action="" method="post">
+                        <div class="contact-name">
+                            <h2>Contact us</h2>
+                        </div>
                         <fieldset>
                             <input placeholder="Your name" type="text" tabindex="1" required autofocus>
                         </fieldset>
-                        <fieldset>
+                        <fieldset class="field-main">
                             <input placeholder="Your Email Address" type="email" tabindex="2" required>
                         </fieldset>
                         <fieldset>
@@ -140,9 +129,18 @@
                         <fieldset>
                             <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
                         </fieldset>
-                    </form> -->
+                    </form>
                 </div>
-            </section>
+            </section> -->
+            <div class="popup-container" id="container">
+                <div class="popup">
+                    <button onClick="closePopup()">&times;</button>
+                    <h1 id="product-info-name"></h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Scelerisque felis imperdiet proin fermentum. Volutpat est velit egestas dui id ornare arcu odio ut. Non nisi est
+                    sit amet facilisis magna etiam. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+                </div>
+            </div>
         </main>
         <footer>
             <div class="social-icons">
