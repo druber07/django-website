@@ -1,18 +1,29 @@
 body{
-    background: #284b63;
+    background: #FFF;
+    height: min(100vh);
 }
-.header{
-    height: 8vh;
+                    /* Header section */
+.nav-item-link{
+    color: #000;
 }
+.Menu-brand{
+    color: #000;
+}
+.burger div{
+    background: #000;
+}
+                    /* Main section */
 main{
-    height: min(80vh);
+    display: grid;
+
 }
+                    /* Footer section */
 footer{
-    background: #284b63;
-    height: 6vh;
+    background: #FFF;
+    top: 100%;
 }
 .social-icon-f,
 .social-icon-i,
 .social-icon-y {
-    color: #fff;
+    color: rgb(170, 170, 170);
 }

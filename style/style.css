@@ -101,13 +101,18 @@ section{
     margin-left: .5em;
 }
                     /* Product section */
+.products{
+    min-height: 100vh;
+}
 .section-name{
-    padding: 2em;
+    padding: 4em 0em 0em 0em;
 }
 .section-name-text{
     font-weight: 300;
 }
 .section-data{
+    overflow-y: hidden;
+    height: 60vh;
     margin-top: 2em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -234,34 +239,34 @@ section{
                     /* Contact-us section */
 .Contact-us{
     height: 92vh;
+    position: relative;
+    width: 75%;
 }
 .contact{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
 }
 .contact-name{
-    grid-area: 1 / 1 / 2 / 2;
+    margin-bottom: 4em;
 }
 .contact h2{
     font-weight: 300;
+}
+.contacts{
+    display: flex;
+    justify-content: space-between;
+}
+.contacts fieldset:first-child{
+    margin-right: 2em;
 }
 fieldset {
     border: medium none !important;
     width: 100%;
 }
-/* .contact input[type="text"]{
-    grid-area: 2 / 1 / 3 / 3;
-}
-.contact input[type="email"]{
-    grid-area: 2 / 3 / 3 / 5;
-}
-.contact textarea{
-    grid-area: 3 / 1 / 4 / 5;
-} */
 .contact input[type="text"],
 .contact input[type="email"],
 .contact textarea {
@@ -284,7 +289,7 @@ fieldset {
     max-width: 100%;
     resize: none;
 }
-.contact button[type="submit"] {
+.contact button[type="button"] {
     cursor: pointer;
     border: none;
     color: #000;
@@ -294,13 +299,13 @@ fieldset {
     background: #1e33ac8f;
     border-radius: 5px;
 }
-.contact button[type="submit"]:hover {
+.contact button[type="button"]:hover {
     background: #1e33ac8f;
     -webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
 }
-.contact button[type="submit"]:active {
+.contact button[type="button"]:active {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 .contact input:focus,
@@ -361,25 +366,24 @@ footer{
     transform: translate(-50%, -50%);
 }
 @media only screen and (max-width: 980px) {
-    body{
-        overflow-y: hidden;
-    }
     .nav{
         transform: translateY(0%);
         transition: 0.3s;
     }
     .nav li{
-        opacity: 0;
+        display: none;
     }
     .active-nav {
         transform: translateY(100%);
     }
     .active-nav li{
-        opacity: 100;
+        display: block;
     }
     .burger{
         display: block;
     }
+
+
 }
 @keyframes Logo_movement {
     0% {

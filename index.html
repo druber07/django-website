@@ -107,6 +107,34 @@
                             </div>
                             <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
                         </div>
+                        <div class="product" id="9" onClick="product_show(this.id)">
+                            <div class="info">
+                                <p class="product-name">p1</p>
+                                <p class="product-cost">100$</p>
+                            </div>
+                            <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                        </div>
+                        <div class="product" id="10" onClick="product_show(this.id)">
+                            <div class="info">
+                                <p class="product-name">p1</p>
+                                <p class="product-cost">100$</p>
+                            </div>
+                            <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                        </div>
+                        <div class="product" id="11" onClick="product_show(this.id)">
+                            <div class="info">
+                                <p class="product-name">p1</p>
+                                <p class="product-cost">100$</p>
+                            </div>
+                            <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                        </div>
+                        <div class="product" id="12" onClick="product_show(this.id)">
+                            <div class="info">
+                                <p class="product-name">p1</p>
+                                <p class="product-cost">100$</p>
+                            </div>
+                            <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                        </div>
                     </div>
                     <div class="show-more">
                         <a href="./product.html" class="show-more-btn">More...</a>
@@ -130,17 +158,19 @@
                         <div class="contact-name">
                             <h2>Contact us</h2>
                         </div>
+                        <div class="contacts">
+                            <fieldset>
+                                <input id="SendersName" placeholder="Your name" type="text" tabindex="1" required autofocus >
+                            </fieldset>
+                            <fieldset>
+                                <input id="SendersGmail" placeholder="Your Email Address" type="email" tabindex="2" required>
+                            </fieldset>
+                        </div>
                         <fieldset>
-                            <input placeholder="Your name" type="text" tabindex="1" required autofocus>
-                        </fieldset>
-                        <fieldset class="field-main">
-                            <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                            <textarea placeholder="Type your message here...." tabindex="5" required id="SendersData"></textarea>
                         </fieldset>
                         <fieldset>
-                            <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
-                        </fieldset>
-                        <fieldset>
-                            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                            <button name="submit" type="button" id="contact-submit" onClick="send_msg()">Submit</button>
                         </fieldset>
                     </form>
                 </div>
@@ -148,7 +178,7 @@
             <div class="popup-container" id="container">
                 <div class="popup">
                     <button onClick="closePopup()">&times;</button>
-                    <h1 id="popup_name"></h1>
+                    <h2 id="popup_name"></h2>
                     <p id="popup_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Scelerisque felis imperdiet proin fermentum. Volutpat est velit egestas dui id ornare arcu odio ut. Non nisi est
                     sit amet facilisis magna etiam. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
