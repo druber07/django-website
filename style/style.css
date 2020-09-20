@@ -46,7 +46,11 @@ section{
                     /* Header section */
             /* Menu */
 .header{
-    background-color: var(--main-bgC);
+    /* background-color: var(--main-bgC); */
+    background: url("../img/BGheader.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .Menu {
     display: flex;
