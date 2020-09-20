@@ -1,0 +1,18 @@
+body{
+    background: #284b63;
+}
+.header{
+    height: 8vh;
+}
+main{
+    height: min(80vh);
+}
+footer{
+    background: #284b63;
+    height: 6vh;
+}
+.social-icon-f,
+.social-icon-i,
+.social-icon-y {
+    color: #fff;
+}

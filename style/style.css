@@ -202,7 +202,7 @@ section{
 }
 .show-more-btn{
     color: #fff;
-    background: #3c6e71;
+    background: #1e33ac8f;
     border-radius: 5px;
     margin: 0 0 5px;
     padding: 10px;
@@ -233,7 +233,7 @@ section{
 }
                     /* Contact-us section */
 .Contact-us{
-    height: 94vh;
+    height: 92vh;
 }
 .contact{
     width: 100%;
@@ -253,7 +253,7 @@ fieldset {
     border: medium none !important;
     width: 100%;
 }
-.contact input[type="text"]{
+/* .contact input[type="text"]{
     grid-area: 2 / 1 / 3 / 3;
 }
 .contact input[type="email"]{
@@ -261,7 +261,7 @@ fieldset {
 }
 .contact textarea{
     grid-area: 3 / 1 / 4 / 5;
-}
+} */
 .contact input[type="text"],
 .contact input[type="email"],
 .contact textarea {
@@ -291,6 +291,8 @@ fieldset {
     margin: 0 0 5px;
     padding: 10px;
     font-size: 15px;
+    background: #1e33ac8f;
+    border-radius: 5px;
 }
 .contact button[type="submit"]:hover {
     background: #1e33ac8f;
@@ -328,8 +330,7 @@ footer{
     display: flex;
     justify-content: center;
     justify-content: space-around;
-    padding: 1.2em;
-    height: 6vh;
+    height: 8vh;
 }
 .social-icon-f,
 .social-icon-i,
