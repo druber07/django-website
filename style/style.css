@@ -343,10 +343,6 @@ footer{
     background: #fff;
     padding-left: 20%;
     padding-right: 20%;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
 }
 .social-icons {
     display: flex;

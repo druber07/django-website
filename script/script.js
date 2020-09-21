@@ -15,9 +15,16 @@ function send_msg(){
   const SendersName = document.getElementById("SendersName");
   const SendersGmail = document.getElementById("SendersGmail");
   const SendersData = document.getElementById("SendersData");
-  document.getElementById("popup_name").innerHTML  = "Message was sended succesfully";
-  document.getElementById("popup_text").innerHTML  = SendersName.value+", you'r message was sended.<br>The answer will be sended to: "+SendersGmail.value+".<br>The message is:<br>"+SendersData.value;
-  container.classList.add("active");
+
+  if (SendersName.value != "" && SendersGmail.value != "" && SendersData.value != ""){
+    document.getElementById("popup_name").innerHTML = "Message was sended succesfully";
+    document.getElementById("popup_text").innerHTML = SendersName.value + ", you'r message was sended.<br>The answer will be sended to: " + SendersGmail.value + ".<br>The message is:<br>" + SendersData.value;
+    container.classList.add("active");
+  }else{
+    document.getElementById("popup_name").innerHTML = "Error";
+    document.getElementById("popup_text").innerHTML = "Enter all the inputs";
+    container.classList.add("active");
+  }
 }
 function closePopup() {
   container.classList.remove("active");
