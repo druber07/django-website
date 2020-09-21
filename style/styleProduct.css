@@ -14,12 +14,11 @@ body{
 }
                     /* Main section */
 main{
-
+    background: #fff;
 }
                     /* Footer section */
 footer{
     background: #FFF;
-    top: 100%;
 }
 .social-icon-f,
 .social-icon-i,
