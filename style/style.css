@@ -107,9 +107,7 @@ section{
                     /* Product section */
 .products{
     min-height: 100vh;
-}
-.productContainer{
-    max-width: 1100px;
+    height: 100%;
 }
 .section-name{
     padding: 4em 0em 0em 0em;
@@ -118,8 +116,7 @@ section{
     font-weight: 300;
 }
 .section-data{
-    overflow-y: hidden;
-    height: 60vh;
+    width: 100%;
     margin-top: 2em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -206,7 +203,8 @@ section{
 }
 
 .show-more {
-    margin-top: 3em;
+    margin-top: 2em;
+    margin-bottom: 3em;
     padding: 0px;
     width: 100%;
     display: flex;
@@ -253,15 +251,13 @@ section{
 .Contact-us{
     height: 92vh;
     position: relative;
-    width: 72%;
 }
 .contact{
-    margin: 0;
     position: absolute;
     top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
 }
 .contact-name{
     margin-bottom: 4em;
@@ -378,16 +374,7 @@ footer{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-@media only screen and (max-width: 1700px) {
-    .Contact-us{
-        width: 80%;
-    }
-}
-@media only screen and (max-width: 1300px) {
-    .Contact-us{
-        width: 85%;
-    }
-}
+
 @media only screen and (max-width: 980px) {
     .nav{
         transform: translateY(0%);
@@ -404,10 +391,6 @@ footer{
     }
     .burger{
         display: block;
-    }
-
-    .Contact-us{
-        width: 90%;
     }
 }
 @keyframes Logo_movement {
