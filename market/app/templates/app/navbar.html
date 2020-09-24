@@ -1,0 +1,29 @@
+{% extends 'app/product.html' %}
+{% load static %}
+<header>
+    <nav class="Menu">
+        <a href="{% url 'Maket' %}" class="Menu-brand">Logo</a>
+        <ul class="nav" id="nav">
+            <li class="nav-item">
+                <a href="{% url 'Maket' %}" class="nav-item-link">
+                    Products
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'Maket' %}" class="nav-item-link">
+                    About Us
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'Maket' %}" class="nav-item-link">
+                    Countact Us
+                </a>
+            </li>
+        </ul>
+        <div class="burger" onClick="navSlide()">
+            <div class="line_1"></div>
+            <div class="line_2"></div>
+            <div class="line_3"></div>
+        </div>
+    </nav>
+</header>

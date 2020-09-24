@@ -1,0 +1,193 @@
+{% extends 'app/main.html' %}
+{% load static %}
+{% block content %}
+<style>
+.header{
+    /* background-color: var(--main-bgC); */
+    background: url("{% static 'images/BGheader.svg' %}");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about-us{
+    background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("{% static 'images/BGaboutUs.jpg' %}");
+    position: relative;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+<section class="header">
+    <nav class="Menu">
+        <a href="#header" class="Menu-brand">Logo</a>
+        <ul class="nav" id="nav">
+            <li class="nav-item">
+                <a href="#products" class="nav-item-link">
+                    Products
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#about-us" class="nav-item-link">
+                    About Us
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact-us" class="nav-item-link">
+                    Countact Us
+                </a>
+            </li>
+        </ul>
+        <div class="burger" onClick="navSlide()">
+            <div class="line_1"></div>
+            <div class="line_2"></div>
+            <div class="line_3"></div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="logo-info">
+            <h1 class="logo-logo">Logo</h1>
+            <p class="logo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+</section>
+
+<main>
+    <section class="products" id="products">
+        <div class="container productContainer">
+            <div class="section-name">
+                <h2 class="section-name-text">Products</h2>
+            </div>
+            <div class="section-data">
+                <div class="product" id="0" onClick="product_show(this.id)" onHover="hoverProduct()">
+                    <div class="info">
+                        <p class="product-name">p1</p>
+                        <p class="product-cost">100$</p>
+                    </div>
+                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                </div>
+                <div class="product" id="1" onClick="product_show(this.id)">
+                    <div class="info">
+                        <p class="product-name">p1</p>
+                        <p class="product-cost">100$</p>
+                    </div>
+                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                </div>
+                <div class="product" id="2" onClick="product_show(this.id)">
+                    <div class="info">
+                        <p class="product-name">p1</p>
+                        <p class="product-cost">100$</p>
+                    </div>
+                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                </div>
+                <div class="product" id="3" onClick="product_show(this.id)">
+                    <div class="info">
+                        <p class="product-name">p1</p>
+                        <p class="product-cost">100$</p>
+                    </div>
+                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                </div>
+                <div class="product" id="5" onClick="product_show(this.id)">
+                    <div class="info">
+                        <p class="product-name">p1</p>
+                        <p class="product-cost">100$</p>
+                    </div>
+                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                </div>
+                <div class="product" id="6" onClick="product_show(this.id)">
+                    <div class="info">
+                        <p class="product-name">p1</p>
+                        <p class="product-cost">100$</p>
+                    </div>
+                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                </div>
+                <div class="product" id="7" onClick="product_show(this.id)">
+                    <div class="info">
+                        <p class="product-name">p1</p>
+                        <p class="product-cost">100$</p>
+                    </div>
+                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                </div>
+                <div class="product" id="8" onClick="product_show(this.id)">
+                    <div class="info">
+                        <p class="product-name">p1</p>
+                        <p class="product-cost">100$</p>
+                    </div>
+                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                </div>
+                <div class="product" id="9" onClick="product_show(this.id)">
+                    <div class="info">
+                        <p class="product-name">p1</p>
+                        <p class="product-cost">100$</p>
+                    </div>
+                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                </div>
+                <div class="product" id="10" onClick="product_show(this.id)">
+                    <div class="info">
+                        <p class="product-name">p1</p>
+                        <p class="product-cost">100$</p>
+                    </div>
+                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                </div>
+                <div class="product" id="11" onClick="product_show(this.id)">
+                    <div class="info">
+                        <p class="product-name">p1</p>
+                        <p class="product-cost">100$</p>
+                    </div>
+                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                </div>
+                <div class="product" id="12" onClick="product_show(this.id)">
+                    <div class="info">
+                        <p class="product-name">p1</p>
+                        <p class="product-cost">100$</p>
+                    </div>
+                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                </div>
+            </div>
+            <div class="show-more">
+                <a href="{% url 'Products' %}" class="show-more-btn">More...</a>
+            </div>
+        </div>
+    </section>
+    <section class="about-us" id="about-us">
+        <div class="container">
+            <div class="about-us-info">
+                <h2 class="about-us-name">About Us</h2>
+                <p class="about-us-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Euismod nisi porta lorem mollis aliquam ut
+                    porttitor leo a. Mattis molestie a iaculis at erat pellentesque. Nibh sit amet commodo nulla
+                    facilisi nullam. Turpis in eu mi bibendum neque egestas congue quisqu <span class="more-info" onClick="aboutUs_info()">. . .</span></p>
+            </div>
+        </div>
+    </section>
+    <section class="Contact-us" id="contact-us">
+        <div class="container">
+            <form class="contact" action="" method="post">
+                <div class="contact-name">
+                    <h2>Contact us</h2>
+                </div>
+                <div class="contacts">
+                    <fieldset>
+                        <input id="SendersName" placeholder="Your name" type="text" tabindex="1" required autofocus >
+                    </fieldset>
+                    <fieldset>
+                        <input id="SendersGmail" placeholder="Your Email Address" type="email" tabindex="2" required>
+                    </fieldset>
+                </div>
+                <fieldset>
+                    <textarea id="SendersData" placeholder="Type your message here...." tabindex="5"
+                        required></textarea>
+                </fieldset>
+                <fieldset>
+                    <button name="submit" type="button" id="contact-submit" onClick="send_msg()">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    {% include 'app/popup.html' %}
+</main>
+{% endblock content %}

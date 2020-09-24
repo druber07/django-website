@@ -1,0 +1,85 @@
+{% extends 'app/main.html' %}
+{% load static %}
+{% block content %}
+<style>
+body{
+    background: #FFF;
+    height: 100%;
+}
+                    /* Header section */
+.nav-item-link{
+    color: #000;
+}
+.Menu-brand{
+    color: #000;
+}
+.burger div{
+    background: #000;
+}
+                    /* Main section */
+main{
+    background: #fff;
+}
+.container{
+    max-width: 1120px;
+}
+.products {
+    min-height: 80vh;
+    height: 100%;
+}
+                    /* Footer section */
+footer{
+    background: #FFF;
+    position: relative;
+    margin-top: -100px;
+}
+.social-icon-f,
+.social-icon-i,
+.social-icon-y {
+    color: rgb(170, 170, 170);
+}
+</style>
+<header>
+    <nav class="Menu">
+        <a href="{% url 'Maket' %}" class="Menu-brand">Logo</a>
+        <ul class="nav" id="nav">
+            <li class="nav-item">
+                <a href="{% url 'Maket' %}" class="nav-item-link">
+                    Products
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'Maket' %}" class="nav-item-link">
+                    About Us
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'Maket' %}" class="nav-item-link">
+                    Countact Us
+                </a>
+            </li>
+        </ul>
+        <div class="burger" onClick="navSlide()">
+            <div class="line_1"></div>
+            <div class="line_2"></div>
+            <div class="line_3"></div>
+        </div>
+    </nav>
+</header>
+<div class="products" id="products">
+    <div class="container">
+        <div class="section-data">
+            {% for product in products %}
+            <div class="product" id="0" onClick="product_show(this.id)" onHover="hoverProduct()">
+                <div class="info">
+                    <p class="product-name">{{ product.name }}</p>
+                    <p class="product-cost">${{ product.cost|floatformat:2 }}</p>
+                </div>
+                <button class="product-info-btn" name="product-info-btn" type="submit"
+                    data-submit="info">Info</button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
