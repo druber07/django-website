@@ -188,6 +188,14 @@
             </form>
         </div>
     </section>
-    {% include 'app/popup.html' %}
+    <div class="popup-container" id="container">
+        <div class="popup">
+            <button onClick="closePopup()">&times;</button>
+            <h2 id="popup_name"></h2>
+            <p id="popup_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Scelerisque felis imperdiet proin fermentum. Volutpat est velit egestas dui id ornare arcu odio ut. Non nisi est
+            sit amet facilisis magna etiam. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+        </div>
+    </div>
 </main>
 {% endblock content %}
