@@ -63,94 +63,20 @@
                 <h2 class="section-name-text">Products</h2>
             </div>
             <div class="section-data">
+                {% for product in products %}
                 <div class="product" id="0" onClick="product_show(this.id)" onHover="hoverProduct()">
                     <div class="info">
-                        <p class="product-name">p1</p>
-                        <p class="product-cost">100$</p>
+                        <p class="product-name">{{ product.name }}</p>
+                        <p class="product-cost">${{ product.cost|floatformat:2 }}</p>
                     </div>
-                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
+                    <button class="product-info-btn" name="product-info-btn" type="submit"
+                        data-submit="info">Info</button>
                 </div>
-                <div class="product" id="1" onClick="product_show(this.id)">
-                    <div class="info">
-                        <p class="product-name">p1</p>
-                        <p class="product-cost">100$</p>
-                    </div>
-                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
-                </div>
-                <div class="product" id="2" onClick="product_show(this.id)">
-                    <div class="info">
-                        <p class="product-name">p1</p>
-                        <p class="product-cost">100$</p>
-                    </div>
-                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
-                </div>
-                <div class="product" id="3" onClick="product_show(this.id)">
-                    <div class="info">
-                        <p class="product-name">p1</p>
-                        <p class="product-cost">100$</p>
-                    </div>
-                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
-                </div>
-                <div class="product" id="5" onClick="product_show(this.id)">
-                    <div class="info">
-                        <p class="product-name">p1</p>
-                        <p class="product-cost">100$</p>
-                    </div>
-                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
-                </div>
-                <div class="product" id="6" onClick="product_show(this.id)">
-                    <div class="info">
-                        <p class="product-name">p1</p>
-                        <p class="product-cost">100$</p>
-                    </div>
-                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
-                </div>
-                <div class="product" id="7" onClick="product_show(this.id)">
-                    <div class="info">
-                        <p class="product-name">p1</p>
-                        <p class="product-cost">100$</p>
-                    </div>
-                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
-                </div>
-                <div class="product" id="8" onClick="product_show(this.id)">
-                    <div class="info">
-                        <p class="product-name">p1</p>
-                        <p class="product-cost">100$</p>
-                    </div>
-                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
-                </div>
-                <div class="product" id="9" onClick="product_show(this.id)">
-                    <div class="info">
-                        <p class="product-name">p1</p>
-                        <p class="product-cost">100$</p>
-                    </div>
-                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
-                </div>
-                <div class="product" id="10" onClick="product_show(this.id)">
-                    <div class="info">
-                        <p class="product-name">p1</p>
-                        <p class="product-cost">100$</p>
-                    </div>
-                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
-                </div>
-                <div class="product" id="11" onClick="product_show(this.id)">
-                    <div class="info">
-                        <p class="product-name">p1</p>
-                        <p class="product-cost">100$</p>
-                    </div>
-                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
-                </div>
-                <div class="product" id="12" onClick="product_show(this.id)">
-                    <div class="info">
-                        <p class="product-name">p1</p>
-                        <p class="product-cost">100$</p>
-                    </div>
-                    <button class="product-info-btn" name="product-info-btn" type="submit" data-submit="info">Info</button>
-                </div>
-            </div>
-            <div class="show-more">
-                <a href="{% url 'Products' %}" class="show-more-btn">More...</a>
-            </div>
+                {% endfor %}
+                <!-- Should be 12 -->
+        </div>
+        <div class="show-more">
+            <a href="{% url 'Products' %}" class="show-more-btn">More...</a>
         </div>
     </section>
     <section class="about-us" id="about-us">
