@@ -171,7 +171,6 @@ section{
     bottom: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
-
     display: none;
     align-items: center;
     justify-content: center;
@@ -281,7 +280,7 @@ fieldset {
     max-width: 100%;
     resize: none;
 }
-.contact button[type="button"] {
+.contact button {
     cursor: pointer;
     border: none;
     color: #000;
@@ -291,13 +290,13 @@ fieldset {
     background: #1e33ac8f;
     border-radius: 5px;
 }
-.contact button[type="button"]:hover {
+.contact button:hover {
     background: #1e33ac8f;
     -webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
 }
-.contact button[type="button"]:active {
+.contact button:active {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 .contact input:focus,

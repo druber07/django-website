@@ -3,7 +3,6 @@
 {% block content %}
 <style>
 .header{
-    /* background-color: var(--main-bgC); */
     background: url("{% static 'images/BGheader.svg' %}");
     background-position: center;
     background-repeat: no-repeat;
@@ -19,6 +18,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.product:hover {
+    background: rgba(0, 0, 0, 0.5);
 }
 </style>
 <section class="header">
@@ -64,7 +66,11 @@
             </div>
             <div class="section-data">
                 {% for product in products %}
-                <div class="product" id="0" onClick="product_show(this.id)" onHover="hoverProduct()">
+                <div class="product" id="{{ forloop.counter0 }}" onClick="product_show(this.id)" style="background-image: url({{ product.imageURL }});
+                                                                                                            background-color: #cccccc;
+                                                                                                            background-position: center;
+                                                                                                            background-repeat: no-repeat;
+                                                                                                            background-size: cover;">
                     <div class="info">
                         <p class="product-name">{{ product.name }}</p>
                         <p class="product-cost">${{ product.cost|floatformat:2 }}</p>
@@ -73,7 +79,6 @@
                         data-submit="info">Info</button>
                 </div>
                 {% endfor %}
-                <!-- Should be 12 -->
         </div>
         <div class="show-more">
             <a href="{% url 'Products' %}" class="show-more-btn">More...</a>
@@ -92,36 +97,50 @@
     </section>
     <section class="Contact-us" id="contact-us">
         <div class="container">
-            <form class="contact" action="" method="post">
+            <form class="contact" method="post">
+                {% csrf_token %}
                 <div class="contact-name">
                     <h2>Contact us</h2>
                 </div>
                 <div class="contacts">
                     <fieldset>
-                        <input id="SendersName" placeholder="Your name" type="text" tabindex="1" required autofocus >
+                        <input name="person_name" id="SendersName" placeholder="Your name" type="text" tabindex="1" required autofocus >
                     </fieldset>
                     <fieldset>
-                        <input id="SendersGmail" placeholder="Your Email Address" type="email" tabindex="2" required>
+                        <input name="person_email" id="SendersEmail" placeholder="Your Email Address" type="email" tabindex="2" required>
                     </fieldset>
                 </div>
                 <fieldset>
-                    <textarea id="SendersData" placeholder="Type your message here...." tabindex="5"
+                    <textarea name="message" id="SendersData" placeholder="Type your message here...." tabindex="5"
                         required></textarea>
                 </fieldset>
                 <fieldset>
-                    <button name="submit" type="button" id="contact-submit" onClick="send_msg()">Submit</button>
+                    <button name="submit" type="submit" id="contact-submit" onClick="send_msg()" type="submit" >Submit</button>
                 </fieldset>
             </form>
         </div>
     </section>
-    <div class="popup-container" id="container">
+    <div class="popup-container" id="containerUse">
         <div class="popup">
-            <button onClick="closePopup()">&times;</button>
-            <h2 id="popup_name"></h2>
-            <p id="popup_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Scelerisque felis imperdiet proin fermentum. Volutpat est velit egestas dui id ornare arcu odio ut. Non nisi est
-            sit amet facilisis magna etiam. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
-        </div>
+            <button id="close_btn" onClick="closePopup()">&times;</button>
+            <h2 id="popup_name">About Us</h2>
+            <p id="popup_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Euismod nisi porta lorem mollis aliquam ut
+                porttitor leo a. Mattis molestie a iaculis at erat pellentesque. Nibh sit amet commodo nulla
+                facilisi nullam. Turpis in eu mi bibendum neque egestas congue quisqu,Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Euismod nisi porta lorem mollis aliquam ut
+                porttitor leo a. Mattis molestie a iaculis at erat pellentesque. Nibh sit amet commodo nulla
+                facilisi nullam. Turpis in eu mi bibendum neque egestas congue quisqu </p>
+        </div> 
     </div>
+    {% for product in products %}
+        <div class="popup-container" id="container {{ forloop.counter0 }}">
+            <div class="popup">
+                <button onClick="closePopup()">&times;</button>
+                <h2 id="popup_name">{{ product.name }}</h2>
+                <p id="popup_text">{{ product.description }}</p>
+            </div> 
+        </div>
+    {% endfor %}
 </main>
 {% endblock content %}
