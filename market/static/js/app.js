@@ -14,7 +14,7 @@ function aboutUs_info() {
   const containerUse = document.getElementById("containerUse");
   containerUse.classList.add("active");
 }
-  
+
 function send_msg(){
   console.log('asdfasdfasd');
   const containerUse = document.getElementById("containerUse");

@@ -1,33 +1,29 @@
 from django.shortcuts import render
 from .models import *
+from .forms import *
 import re 
 import time
 
-regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
-def check(email):  
-    if(re.search(regex,email)):
-        return True
-    else:  
-        return False
-
 def index(request):
     products = Product.objects.all()[:6]
-    context = {'products': products}
-
+    messages = Messages.objects.all()
+    
+    form = MessagesForm()
     if request.method == "POST":
-        person_name = request.POST['person_name']
-        person_email = request.POST['person_email']
-        message = request.POST['message']
+        form = MessagesForm(request.POST or None)
+        if form.is_valid():
+            used = True
+            for m in messages:
+                if(form.cleaned_data["sender"] == m.sender and form.cleaned_data["email"] == m.email and form.cleaned_data["message"] == m.message):
+                    if used:
+                        used = False
+            if used:    
+                form.save()
 
-        if(person_name != "" and check(person_email) and message != ""):
-            Messages.objects.create(sender= person_name, email= person_email, message= message)
-            print(person_name)
-            time.sleep(3)
+            form = MessagesForm()
+    context ={'products': products}
+    return render(request, 'app/welcome.html', context)
 
-        return render(request, 'app/welcome.html', context)
-
-    else:
-        return render(request, 'app/welcome.html', context)
 
 def product(request):
     products = Product.objects.all()    
